@@ -4,7 +4,6 @@ import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
 export default (): CreateCategoryController => {
     const categoriesRepository = new CategoriesRepository();
-    console.log("TESTE");
 
     const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
 
