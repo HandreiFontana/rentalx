@@ -15,7 +15,6 @@ class CreateUserUseCase {
 
     async execute({
         name,
-        username,
         email,
         password,
         driver_license
@@ -30,8 +29,7 @@ class CreateUserUseCase {
         const passwordHash = await hash(password, 8);
 
         await this.usersRepository.create({
-            name, 
-            username, 
+            name,
             email, 
             password: passwordHash, 
             driver_license
