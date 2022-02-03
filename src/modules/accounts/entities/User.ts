@@ -17,7 +17,7 @@ class User {
     email: string;
 
     @Column()
-    sword: string;
+    password: string;
 
     @Column()
     driver_license: string;
