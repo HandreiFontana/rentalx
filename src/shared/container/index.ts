@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 import "@shared/container/providers";
 
 import { ICategoriesRepository } from "@modules/cars/repositories/ICategoriesRepository";
-import { CategoriesRepository } from '@modules/cars/infra/typeorm/repositories/CategoriesRespository';
+import { CategoriesRepository } from '@modules/cars/infra/typeorm/repositories/CategoriesRepository';
 
 import { ISpecificationsRepository } from '@modules/cars/repositories/ISpecificationRepository';
 import { SpecificationsRepository } from '@modules/cars/infra/typeorm/repositories/SpecificationRepository';
