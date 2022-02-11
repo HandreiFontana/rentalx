@@ -2,9 +2,9 @@
     "type": "postgres",
     "port": 5432,
     "host": "localhost",
-    "username": "rentx_user",
-    "password": "123456",
-    "database": "rentx_db",
+    "username": "xxxxx",
+    "password": "xxxxx",
+    "database": "xxxxx",
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "entities": [
         "./src/modules/**/entities/*.ts"
