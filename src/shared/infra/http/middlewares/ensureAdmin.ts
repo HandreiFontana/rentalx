@@ -15,7 +15,7 @@ export async function ensureAdmin(
 
     if(!user.isAdmin) {
         throw new AppError("User is not an admin")
-    };
+    }
 
     return next();
 }

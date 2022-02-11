@@ -10,7 +10,7 @@ import { AppError } from "@shared/errors/AppErrors";
 interface IRequest {
     token: string,
     password: string,
-};
+}
 
 @injectable()
 class ResetPasswordUserUseCase {
@@ -22,7 +22,7 @@ class ResetPasswordUserUseCase {
         private dateProvider: IDateProvider,
         @inject("UsersRepository")
         private usersRepository: IUsersRepository
-    ) { };
+    ) { }
 
     async execute({ token, password }: IRequest): Promise<void> {
         const userToken = await this
@@ -33,14 +33,14 @@ class ResetPasswordUserUseCase {
 
         if (!userToken) {
             throw new AppError("Token invalid!");
-        };
+        }
 
         if (this.dateProvider.compareIfBefore(
             userToken.expires_date,
             this.dateProvider.dateNow(),
         )) {
             throw new AppError("Token expired!");
-        };
+        }
 
         const user = await this.usersRepository.findById(userToken.user_id);
 
@@ -49,8 +49,8 @@ class ResetPasswordUserUseCase {
         await this.usersRepository.create(user);
 
         await this.usersTokensRepository.deleteById(userToken.id);
-    };
+    }
 
-};
+}
 
 export { ResetPasswordUserUseCase };

@@ -17,8 +17,8 @@ class ListAvailableCarsController {
         });
 
         return response.json(cars);
-    };
+    }
 
-};
+}
 
 export { ListAvailableCarsController };

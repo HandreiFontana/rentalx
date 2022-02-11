@@ -23,7 +23,7 @@ class DevolutionRentalUseCase {
         private dateProvider: IDateProvider,
     ) {}
 
-    async execute( id, user_id = null ): Promise<Rental> {
+    async execute({ id, user_id }: IRequest ): Promise<Rental> {
         
         const minimum_daily = 1
 
@@ -55,7 +55,7 @@ class DevolutionRentalUseCase {
         if(delay > 0) {
             const calculate_fine = delay * car.fine_amount;
             total = calculate_fine;
-        };
+        }
 
         total += daily * car.daily_rate;
 
@@ -69,6 +69,6 @@ class DevolutionRentalUseCase {
         return rental;
 
     }
-};
+}
 
 export { DevolutionRentalUseCase };

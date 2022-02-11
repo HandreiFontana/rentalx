@@ -18,7 +18,7 @@ class CreateCarSpecificationController {
         });
 
         return response.json(cars);
-    };
-};
+    }
+}
 
 export { CreateCarSpecificationController };

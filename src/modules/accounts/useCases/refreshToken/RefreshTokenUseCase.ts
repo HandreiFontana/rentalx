@@ -9,7 +9,7 @@ import { AppError } from "@shared/errors/AppErrors";
 interface IPayload {
     sub: string;
     email: string;
-};
+}
 
 @injectable()
 class RefreshTokenUseCase {
@@ -36,7 +36,7 @@ class RefreshTokenUseCase {
 
         if (!userToken) {
             throw new AppError("Refresh token does not exists!");
-        };
+        }
 
 
         await this.usersTokenRepository.deleteById(userToken.id);
@@ -57,8 +57,8 @@ class RefreshTokenUseCase {
         });
 
         return refresh_token;
-    };
+    }
 
-};
+}
 
 export { RefreshTokenUseCase };

@@ -32,6 +32,6 @@ class CategoriesRepository implements ICategoriesRepository {
         const category = await this.repository.findOne({ name });
         return category;
     }
-};
+}
 
 export { CategoriesRepository };

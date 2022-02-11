@@ -70,10 +70,10 @@ export class CreateRentals1644415746492 implements MigrationInterface {
                 ],
             })
         );
-    };
+    }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("rentals");
-    };
+    }
 
-};
+}

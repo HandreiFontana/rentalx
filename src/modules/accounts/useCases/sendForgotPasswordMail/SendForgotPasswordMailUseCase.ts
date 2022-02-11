@@ -38,7 +38,7 @@ class SendForgotPasswordMailUseCase {
 
         if (!user) {
             throw new AppError("User does not exists!");
-        };
+        }
 
         const token = uuidV4();
 
@@ -61,8 +61,8 @@ class SendForgotPasswordMailUseCase {
             variables,
             templatePath,
         );
-    };
+    }
 
-};
+}
 
 export { SendForgotPasswordMailUseCase };

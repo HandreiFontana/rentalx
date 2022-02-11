@@ -22,6 +22,6 @@ class UploadCarImagesUseCase {
         })
     }
 
-};
+}
 
 export { UploadCarImagesUseCase };

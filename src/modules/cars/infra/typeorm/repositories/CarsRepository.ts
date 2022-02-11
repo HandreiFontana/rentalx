@@ -12,7 +12,7 @@ class CarsRepository implements ICarsRepository {
 
     constructor() {
         this.repository = getRepository(Car);
-        ;
+        
     }
     
     async create({ 
@@ -41,7 +41,7 @@ class CarsRepository implements ICarsRepository {
         await this.repository.save(car);
         
         return car;
-    };
+    }
     
     async findByLicensePlate(license_plate: string): Promise<Car> {
         const car = await this.repository.findOne({
@@ -49,7 +49,7 @@ class CarsRepository implements ICarsRepository {
         })
         
         return car;
-    };
+    }
     
     async findAvailable(
         brand?: string, 
@@ -77,12 +77,12 @@ class CarsRepository implements ICarsRepository {
             
             return cars;
             
-        };
+        }
         
         async findById(id: string): Promise<Car> {
             const car = await this.repository.findOne(id);
             return car;
-        };
+        }
         
         async updateAvailable(
             id: string, 

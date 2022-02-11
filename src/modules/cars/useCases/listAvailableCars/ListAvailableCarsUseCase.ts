@@ -26,6 +26,6 @@ class ListAvailableCarsUseCase {
         return cars;
     }
 
-};
+}
 
 export { ListAvailableCarsUseCase };

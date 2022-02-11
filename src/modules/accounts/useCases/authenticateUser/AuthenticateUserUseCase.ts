@@ -14,7 +14,7 @@ import { AppError } from "@shared/errors/AppErrors";
 interface IRequest {
     email: string;
     password: string;
-};
+}
 
 interface IResponse {
     user: {
@@ -23,7 +23,7 @@ interface IResponse {
     },
     token: string,
     refresh_token: string,
-};
+}
 
 @injectable()
 class AuthenticateUserUseCase {

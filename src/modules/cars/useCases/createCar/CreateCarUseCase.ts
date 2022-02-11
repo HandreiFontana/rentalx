@@ -12,7 +12,7 @@ interface IRequest {
     fine_amount: number;
     brand: string;
     category_id: string;
-};
+}
 
 @injectable()
 class CreateCarUseCase {
@@ -20,7 +20,7 @@ class CreateCarUseCase {
     constructor(
         @inject("CarsRepository")
         private carsRepository: ICarsRepository
-    ) {};
+    ) {}
 
     async execute({
         name, 
@@ -38,7 +38,7 @@ class CreateCarUseCase {
 
         if (carAlreadyExists) {
             throw new AppError("Car already exists!");
-        };
+        }
 
         const car = await this.carsRepository.create({
             name, 
@@ -53,6 +53,6 @@ class CreateCarUseCase {
         return car;
     }
 
-};
+}
 
 export { CreateCarUseCase };

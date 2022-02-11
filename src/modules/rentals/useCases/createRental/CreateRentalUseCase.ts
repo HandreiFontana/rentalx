@@ -10,7 +10,7 @@ interface IRequest {
     user_id: string;
     car_id: string;
     expected_return_date: Date;
-};
+}
 
 @injectable()
 class CreateRentalUseCase {
@@ -35,13 +35,13 @@ class CreateRentalUseCase {
 
         if (carUnavailable) {
             throw new AppError("Car is unavailable!");
-        };
+        }
 
         const rentalOpenToUser = await this.rentalsRepository.findOpenRentalByUser(user_id);
 
         if (rentalOpenToUser) {
             throw new AppError("There's a rental in progress for user!");
-        };
+        }
 
         const dateNow = this.dateProvider.dateNow();
 
@@ -63,8 +63,8 @@ class CreateRentalUseCase {
         await this.carsRepository.updateAvailable(car_id, false);
 
         return rental;
-    };
+    }
 
-};
+}
 
 export { CreateRentalUseCase };

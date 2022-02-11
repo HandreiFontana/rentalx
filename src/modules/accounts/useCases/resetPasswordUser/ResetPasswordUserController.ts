@@ -20,6 +20,6 @@ class ResetPasswordUserController {
 
         return response.send();
     }
-};
+}
 
 export { ResetPasswordUserController };

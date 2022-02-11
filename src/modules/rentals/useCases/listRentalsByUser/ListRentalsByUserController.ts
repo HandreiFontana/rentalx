@@ -17,6 +17,6 @@ class ListRentalsByUserController {
         return response.json(rentals);
     }
 
-};
+}
 
 export { ListRentalsByUserController };

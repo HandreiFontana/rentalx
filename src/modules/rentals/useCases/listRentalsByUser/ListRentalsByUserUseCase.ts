@@ -20,6 +20,6 @@ class ListRentalsByUserUseCase {
         return rentalsByUser;
     }
 
-};
+}
 
 export { ListRentalsByUserUseCase };

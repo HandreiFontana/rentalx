@@ -31,7 +31,7 @@ class UserTokens {
         if(!this.id) {
             this.id = uuidV4();
         }
-    };
-};
+    }
+}
 
 export { UserTokens };

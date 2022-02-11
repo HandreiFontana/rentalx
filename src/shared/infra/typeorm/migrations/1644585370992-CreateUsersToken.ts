@@ -42,10 +42,10 @@ export class CreateUsersToken1644585370992 implements MigrationInterface {
                 ]
             })
         );
-    };
+    }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("users_tokens");
-    };
+    }
 
 }

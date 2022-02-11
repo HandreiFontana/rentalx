@@ -25,7 +25,7 @@ class EtherealMailProvider implements IMailProvider {
         })
             .catch(err => console.error(err));
 
-    };
+    }
 
     async sendMail(
         to: string,
@@ -50,8 +50,8 @@ class EtherealMailProvider implements IMailProvider {
 
         console.log("Message sent: %s", message.messageId);
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(message));
-    };
+    }
 
-};
+}
 
 export { EtherealMailProvider };

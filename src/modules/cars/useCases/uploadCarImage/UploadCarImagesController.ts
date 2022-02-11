@@ -24,6 +24,6 @@ class UploadCarImagesController {
 
         return response.status(201).send();
     }
-};
+}
 
 export { UploadCarImagesController };
