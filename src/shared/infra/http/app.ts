@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import "dotenv/config";
 import express, { Request, Response, NextFunction } from 'express';
 import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
@@ -32,4 +33,4 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
     })
 })
 
-export { app }
+export { app };
